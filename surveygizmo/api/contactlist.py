@@ -15,7 +15,7 @@ class ContactList(base.Resource):
 
     def create(self, contactlist_name, **kwargs):
         kwargs.update({
-            'listname': contactlist_name,
+            'list_name': contactlist_name,
         })
         return super(ContactList, self).create(**kwargs)
 
