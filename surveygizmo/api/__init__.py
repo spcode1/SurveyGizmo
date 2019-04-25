@@ -16,6 +16,7 @@ from .surveyreport import SurveyReport
 from .surveyresponse import SurveyResponse
 from .surveystatistic import SurveyStatistic
 from .surveytheme import SurveyTheme
+from .surveycontact import SurveyContact
 
 
 __all__ = [
@@ -34,4 +35,5 @@ __all__ = [
     'SurveyResponse',
     'SurveyStatistic',
     'SurveyTheme',
+    'SurveyContact',
 ]
