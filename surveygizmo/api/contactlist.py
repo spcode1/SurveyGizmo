@@ -13,21 +13,23 @@ class ContactList(base.Resource):
         kwargs.update({'contactlist_id': contactlist_id, })
         return super(ContactList, self).get(**kwargs)
 
-    def create(self, listname, **kwargs):
+    def create(self, contactlist_name, **kwargs):
         kwargs.update({
-            'listname': listname,
+            'listname': contactlist_name,
         })
         return super(ContactList, self).create(**kwargs)
 
-    def update(self, contactlist_id, semailaddress, **kwargs):
+    def update(self, contactlist_id, **kwargs):
         kwargs.update({
             'contactlist_id': contactlist_id,
-            'semailaddress': semailaddress,
         })
         return super(ContactList, self).update(**kwargs)
 
     def copy(self, **kwargs):
         raise NotImplementedError()
 
-    def delete(self, **kwargs):
-        raise NotImplementedError()
+    def delete(self, contactlist_id, **kwargs):
+        kwargs.update({
+            'contactlist_id': contactlist_id,
+        })
+        return super(ContactList, self).delete(**kwargs)
